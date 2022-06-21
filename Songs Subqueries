@@ -1,4 +1,4 @@
-**Created two tables that relate
+--Created two tables that relate
 
 CREATE TABLE artists (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -60,16 +60,16 @@ INSERT INTO songs (artist, title)
     VALUES ("Guns N' Roses", "Don't cry");
     
     
-** Show songs from Queen
+-- Show songs from Queen
 
 SELECT title FROM songs WHERE artist = "Queen";
 
 
-** Show Pop artists
+-- Show Pop artists
 
 SELECT name FROM artists WHERE genre = "Pop";
 
 
-**Added another query that will select the title of all the songs from the 'Pop' artists. Used IN on a nested subquery that's based on the previous query.
+-- Added another query that will select the title of all the songs from the 'Pop' artists. Used IN on a nested subquery that's based on the previous query.
 
 SELECT title FROM songs WHERE artist IN (SELECT name FROM artists WHERE genre = "Pop");
