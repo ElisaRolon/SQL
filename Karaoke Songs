@@ -1,4 +1,4 @@
-** Create table of Karaoke Songs
+-- Create table of Karaoke Songs
 
 CREATE TABLE songs (
     id INTEGER PRIMARY KEY,
@@ -28,13 +28,13 @@ INSERT INTO songs (title, artist, mood, duration, released)
     SELECT title from songs;
     
     
-    **Add another SELECT that uses AND to show the titles of songs that are 'epic', or released after 1990.
+-- Add another SELECT that uses AND to show the titles of songs that are 'epic', or released after 1990.
     
     SELECT title FROM songs WHERE mood = "epic" OR released > 1990 ; 
     
     
     
-    **Add another SELECT that uses AND to show the titles of songs that are 'epic', and released after 1990, and less than 4 minutes long.
+-- Add another SELECT that uses AND to show the titles of songs that are 'epic', and released after 1990, and less than 4 minutes long.
     
     SELECT title FROM songs WHERE mood = "epic" AND released > 1990 AND duration < 240;
     
